@@ -7,6 +7,7 @@
  */
 function convertToCelsius(f) {
     // TODO
+    return (f - 32) / 1.8
   }
   
   /**
@@ -24,14 +25,32 @@ function convertToCelsius(f) {
    */
   function describeTemperature(f) {
     // TODO
-  }
+    let message = ' ';
+    const tempF = f * 1;
+
+    if (tempF < 32) {
+      message = 'very cold'
+    } else if (tempF < 64 ){
+      message = 'cold'
+    } else if (tempF < 86 ){
+      message = 'warm'
+    } else if (tempF < 100 ){
+      message = 'hot'
+    } else if (tempF >= 100 ){
+      message = 'very hot'
+    }
+
+    return message;
+    }
   
   /**
    * @param {number} limit
    * @returns {number} a random integer in the range [0, `limit`)
    */
   function getRandomInt(limit) {
+    //limit == a number that is the highest range of numbers to choose from
     // TODO
+    return Math.round(Math.random()*limit);
   }
   
   // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
